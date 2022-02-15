@@ -25,6 +25,10 @@ run = async()=>{
     //Transfer DAI
     let reciever = "0xDf0d4d8EA2F2b20802eEfbC3699458FAfEbCD4dB"
     let amount=web3.utils.toWei('1','Ether')
+     result = await daiContract.methods.transfer(reciever,amount).send({
+        from: account,
+        gasLimit: 6000000,
+        gasPrice: web3.utils.toWei('50','Gwei')
    
 
     })
