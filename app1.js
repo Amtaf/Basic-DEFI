@@ -1,6 +1,6 @@
 //configure ethersjs
 const {ethers} = require("ethers");
-const provider = new ethers.providers.InfuraProvider('rinkeby', '11781c2858794d1c8987696f2c6a57ee');
+const provider = new ethers.providers.InfuraProvider('rinkeby', 'ProjectID from Infura');
 const account = '0x7D67e32C5d5A7e9a0F6E064913953Ac4B58F1f30'
 //DAI token details
 const daiAddress = '0xc7ad46e0b8a400bb3c915120d284aafba8fc4735'
@@ -14,7 +14,7 @@ run = async()=>{
     result = await provider.getBalance(account);
     let resultFinal= ethers.utils.formatEther(result)
     console.log("My Ether balance",resultFinal)
-
+//Check My DAI balance
 
 }
 run()
