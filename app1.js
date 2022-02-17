@@ -15,6 +15,9 @@ run = async()=>{
     let resultFinal= ethers.utils.formatEther(result)
     console.log("My Ether balance",resultFinal)
 //Check My DAI balance
+    result = await daiContract.balanceOf(account);
+    let DAIBalance = ethers.utils.formatEther(result);
+    console.log("My DAI balance is :", DAIBalance)
 
 }
 run()
